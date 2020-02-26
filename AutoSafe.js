@@ -60,7 +60,7 @@ function showurl(datajson){
 			no++;
 		}
 		if (check == false) {
-			linktag[i].href = links[randindex] + setting.path + aesCrypto.encrypt(convertstr(linktag[i].href),convertstr('root')); + setting.path2 + aesCrypto.decrypt(convertstr($.urlParam('o')),convertstr('root')); window.open(realurl, '_blank');
+			linktag[i].href = links[randindex] + setting.path + aesCrypto.encrypt(convertstr(linktag[i].href),convertstr('root')); + setting.path2 + aesCrypto.decrypt(convertstr(linktag[i].href),convertstr('root'));
 			linktag[i].rel = "nofollow";
 			linktag[i].target = "_blank";
 		}

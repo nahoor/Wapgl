@@ -1,0 +1,38 @@
+{
+  "name": "Meeran24x7",
+  "short_name": "Meeran24x7",
+  "start_url": "http://www.meeran24x7.com/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#C51162",
+  "description": "Blogs that discuss Blogger tutorials, tricks, tips,  and Bike and Car tips, sales, review, as well as Android tutorial, review, tips, tricks, all tips",
+  "icons": [{
+    "src": "https://1.bp.blogspot.com/-d3xyMXFMG9o/XwsfZGkVElI/AAAAAAAAAEM/j9LviOrYqR4fdZ0UEM8q4K_oEbYEgWj3QCLcBGAsYHQ/s48/icon_m24x7.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "https://1.bp.blogspot.com/-d3xyMXFMG9o/XwsfZGkVElI/AAAAAAAAAEM/j9LviOrYqR4fdZ0UEM8q4K_oEbYEgWj3QCLcBGAsYHQ/s72/icon_m24x7.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }, {
+    "src": "https://1.bp.blogspot.com/-d3xyMXFMG9o/XwsfZGkVElI/AAAAAAAAAEM/j9LviOrYqR4fdZ0UEM8q4K_oEbYEgWj3QCLcBGAsYHQ/s96/icon_m24x7.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }, {
+    "src": "https://1.bp.blogspot.com/-d3xyMXFMG9o/XwsfZGkVElI/AAAAAAAAAEM/j9LviOrYqR4fdZ0UEM8q4K_oEbYEgWj3QCLcBGAsYHQ/s144/icon_m24x7.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "https://1.bp.blogspot.com/-d3xyMXFMG9o/XwsfZGkVElI/AAAAAAAAAEM/j9LviOrYqR4fdZ0UEM8q4K_oEbYEgWj3QCLcBGAsYHQ/s168/icon_m24x7.png",
+    "sizes": "168x168",
+    "type": "image/png"
+  }, {
+    "src": "https://1.bp.blogspot.com/-d3xyMXFMG9o/XwsfZGkVElI/AAAAAAAAAEM/j9LviOrYqR4fdZ0UEM8q4K_oEbYEgWj3QCLcBGAsYHQ/s192/icon_m24x7.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }, {
+    "src": "https://1.bp.blogspot.com/-d3xyMXFMG9o/XwsfZGkVElI/AAAAAAAAAEM/j9LviOrYqR4fdZ0UEM8q4K_oEbYEgWj3QCLcBGAsYHQ/s512/icon_m24x7.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}

@@ -37,7 +37,8 @@ success: function showurl(datajson) {
     var checkexception = "";
     var linktag = document.getElementsByTagName("a");
     var tie = document.title;
-    var xox = Array.prototype.map.call(document.getElementsByTagName("img"), img => img.src);
+    var xox = Array.prototype.map.call(document.getElementsByTagName("img"), 
+    img => img.src.replace('/s1600/', '/s320/'));
     var links = new Array();
 
     var semuaartikel = datajson.feed.openSearch$totalResults.$t;

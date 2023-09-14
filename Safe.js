@@ -10,17 +10,29 @@ function extractDomain(url) {
     return hostname;
 }
 
-function encodeBase64(str) {
-    return btoa(str);
+function exception() {
+    var exception = new Array();
+    setting.exceptionurl = setting.exceptionurl;
+    exception = setting.exceptionurl.split(",");
+    return exception;
 }
 
-function decodeBase64(str) {
-    return atob(str);
+if (!setting.exceptionurl) {
+    setting.exceptionurl = window.location.href;
+} else {
+    setting.exceptionurl += "," + window.location.href;
 }
+var exception = exception();
 
 function showurl(datajson) {
+
+    var check = false;
+    var no = 0;
+    var exceptionlength = exception.length;
+    var checklink = "";
+    var checkexception = "";
     var linktag = document.getElementsByTagName("a");
-    var links = [];
+    var links = new Array();
 
     var semuaartikel = datajson.feed.openSearch$totalResults.$t;
     for (var i = 0; i < semuaartikel; i++) {
@@ -32,11 +44,26 @@ function showurl(datajson) {
             }
         }
         links[i] = urlartikel;
+        var randindex = Math.random() * links.length;
+        randindex = parseInt(randindex);
     }
-
     for (var i = 0; i < linktag.length; i++) {
-        linktag[i].href = encodeBase64(links[i % links.length]);
-        linktag[i].rel = "nofollow";
-        linktag[i].target = "_blank";
+        check = false;
+        no = 0;
+        while (check == false && no < exceptionlength) {
+            checklink = extractDomain(linktag[i].href);
+            checkexception = extractDomain(exception[no]);
+            if (checklink.match(checkexception)) {
+                check = true;
+            }
+            no++;
+        }
+        if (check == false) {
+            // Here, we create a custom URL based on the feed data and encode it with base64
+            var customURL = links[randindex] + setting.path + btoa(linktag[i].href);
+            linktag[i].href = customURL;
+            linktag[i].rel = "nofollow";
+            linktag[i].target = "_blank";
+        }
     }
 }
